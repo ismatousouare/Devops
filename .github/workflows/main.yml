@@ -1,10 +1,10 @@
-name: Python Application Workflow
+name : Simple workflow
 
-on: [push]
+on : [push]
 
 jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
+  job1:
+    runs-on : ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -14,3 +14,5 @@ jobs:
       with:
         python-version: '3.8'
 
+    - name: Say Hello
+      run: echo "Hello"
